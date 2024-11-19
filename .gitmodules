@@ -1,0 +1,6 @@
+[submodule "pioncc"]
+	path = pioncc
+	url = git@github.com:mengelbart/pioncc.git
+[submodule "cctestbed2"]
+	path = cctestbed2
+	url = git@github.com:mengelbart/cctestbed2.git
