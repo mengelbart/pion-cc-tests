@@ -61,7 +61,7 @@ APP_SETTINGS = [
                 'start_time': 0,
                 'duration': 30,
                 'environment': [],
-                'binary': '../../pioncc/pioncc',
+                'binary': 'pioncc/pioncc',
                 'arguments': [
                     '-receiver', '10.1.0.10:8080',
                     '-sender', '10.3.0.20:8080',
@@ -73,7 +73,7 @@ APP_SETTINGS = [
                 'start_time': 0,
                 'duration': 30,
                 'environment': [],
-                'binary': '../../pioncc/pioncc',
+                'binary': 'pioncc/pioncc',
                 'arguments': [
                     '-send',
                     '-receiver', '10.1.0.10:8080',
