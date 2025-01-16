@@ -60,6 +60,36 @@ TC_SETTINGS = [
 
 APP_SETTINGS = [
     {
+        'name': 'static',
+        'apps': [
+            {
+                'name': 'receiver',
+                'namespace': 'ns1',
+                'start_time': 0,
+                'duration': 100,
+                'environment': [],
+                'binary': 'pioncc/pioncc',
+                'arguments': [
+                    '-receiver', '10.1.0.10:8080',
+                    '-sender', '10.3.0.20:8080',
+                ],
+            },
+            {
+                'name': 'sender',
+                'namespace': 'ns4',
+                'start_time': 0,
+                'duration': 100,
+                'environment': [],
+                'binary': 'pioncc/pioncc',
+                'arguments': [
+                    '-receiver', '10.1.0.10:8080',
+                    '-sender', '10.3.0.20:8080',
+                    '-send',
+                ],
+            },
+        ],
+    },
+    {
         'name': 'gcc',
         'apps': [
             {
@@ -82,9 +112,42 @@ APP_SETTINGS = [
                 'environment': [],
                 'binary': 'pioncc/pioncc',
                 'arguments': [
-                    '-send',
                     '-receiver', '10.1.0.10:8080',
                     '-sender', '10.3.0.20:8080',
+                    '-send',
+                    '-gcc',
+                ],
+            },
+        ],
+    },
+    {
+        'name': 'generic_loss_cc',
+        'apps': [
+            {
+                'name': 'receiver',
+                'namespace': 'ns1',
+                'start_time': 0,
+                'duration': 100,
+                'environment': [],
+                'binary': 'pioncc/pioncc',
+                'arguments': [
+                    '-receiver', '10.1.0.10:8080',
+                    '-sender', '10.3.0.20:8080',
+                    '-ccfb',
+                ],
+            },
+            {
+                'name': 'sender',
+                'namespace': 'ns4',
+                'start_time': 0,
+                'duration': 100,
+                'environment': [],
+                'binary': 'pioncc/pioncc',
+                'arguments': [
+                    '-receiver', '10.1.0.10:8080',
+                    '-sender', '10.3.0.20:8080',
+                    '-send',
+                    '-gencc',
                 ],
             },
         ],
